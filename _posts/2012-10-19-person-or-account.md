@@ -42,19 +42,19 @@ So if you were to look at all the "people" KISSmetrics has pooled together, it w
 
 Here's how I picture a session, in Pseudo-ruby-code:
 
-KM.identify('user1')
-KM.record('Logged In')
-KM.record('Viewed an Organization')
-KM.record('Joined Organization', {'Organizations Joined' => 'Org1'})
-KM.identify('org1')
-KM.record('Added Contact', {'Contacts Added' => 'Contact1'})
-KM.identify('contact1')
-KM.record('Added Subscription', {'Subscriptions Added' => 'Something'})
-KM.identify('user1')
-KM.record('Viewed an Organization') # Here is them switching to managing Org2
-KM.identify('org2')
-KM.record('Added Contact', {'Contacts Added' => 'Contact2'})
-KM.identify('contact2')
-KM.record('Added Subscription', {'Subscriptions Added' => 'Something Else'})
+    KM.identify('user1')
+    KM.record('Logged In')
+    KM.record('Viewed an Organization')
+    KM.record('Joined Organization', {'Organizations Joined' => 'Org1'})
+    KM.identify('org1')
+    KM.record('Added Contact', {'Contacts Added' => 'Contact1'})
+    KM.identify('contact1')
+    KM.record('Added Subscription', {'Subscriptions Added' => 'Something'})
+    KM.identify('user1')
+    KM.record('Viewed an Organization') # Here is them switching to managing Org2
+    KM.identify('org2')
+    KM.record('Added Contact', {'Contacts Added' => 'Contact2'})
+    KM.identify('contact2')
+    KM.record('Added Subscription', {'Subscriptions Added' => 'Something Else'})
 
 It does seem unwieldy, but I don't know if many of our customers use KM to approach their data in the way you're approaching it. Let me bring up your situation with our product team to see if they might have other suggestions.
